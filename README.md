@@ -28,8 +28,8 @@ TODO Fill out
 
 Created the general format for this readme.  Took an initial stab at wireframing the front end, changes sure to come once api and further along.
 
-![alt text][wireframe-v1]
-[wireframe-v1]: http://i.imgur.com/VslqQTI.jpg
+
+![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
 
 ## User Stories
 
