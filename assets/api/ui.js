@@ -22,7 +22,12 @@ const onSignInSuccess = (data) => {
 
 // TODO Create function for SignIn failure
 
+const changePasswordSuccess = () => {
+  console.log('Password Change Successful')
+}
+
 module.exports = {
   onSignUpSuccess,
-  onSignInSuccess
+  onSignInSuccess,
+  changePasswordSuccess
 }

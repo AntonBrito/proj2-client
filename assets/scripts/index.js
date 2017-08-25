@@ -26,4 +26,5 @@ $(() => {
   $('#sign-up').on('submit', events.onSignUp)
   $('#sign-in').on('submit', events.onSignIn)
   $('#already-member').click(memberLogin)
+  $('#change-password').on('submit', events.onChangePassword)
 })
