@@ -27,4 +27,5 @@ $(() => {
   $('#sign-in').on('submit', events.onSignIn)
   $('#already-member').click(memberLogin)
   $('#change-password').on('submit', events.onChangePassword)
+  $('#sign-out').on('submit', events.onSignOut)
 })

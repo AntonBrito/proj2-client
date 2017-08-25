@@ -26,8 +26,20 @@ const changePasswordSuccess = () => {
   console.log('Password Change Successful')
 }
 
+// TODO Create function for Change Password Failure
+
+const signOutSuccess = () => {
+  app.user = null
+  console.log('Sign Out Successful')
+  $('#change-password').addClass('hidden')
+  $('#sign-out').addClass('hidden')
+  $('#sign-up').removeClass('hidden')
+  $('#already-member').removeClass('hidden')
+}
+
 module.exports = {
   onSignUpSuccess,
   onSignInSuccess,
-  changePasswordSuccess
+  changePasswordSuccess,
+  signOutSuccess
 }
