@@ -41,6 +41,16 @@
                   <input type="submit" name="submit" value="Sign up!!">
                 </fieldset>
               </form>
+          <form id="sign-in" class="hidden">
+              <fieldset>
+                <legend>Sign in!</legend>
+                <input type="text" name="credentials[email]" value="" placeholder="email">
+                <input type="password" name="credentials[password]" value="" placeholder="password">
+                <p id = "sign-in-success" class = "successMessage hidden">Sign In Successfull!</p>
+                <p id = "sign-in-error" class = "errorMessage hidden">Unsuccessfull, Username or Password Incorrect</p>
+                <input type="submit" name="submit" value="Sign in!">
+              </fieldset>
+            </form>
 
         </div>
       </main>
