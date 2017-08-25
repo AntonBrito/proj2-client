@@ -10,6 +10,12 @@ const onSignUpSuccess = (data) => {
 }
 // TODO Create function for SignUp Failure
 
+const onSignInSuccess = (data) => {
+  app.user = data.user
+  console.log('Sign in Working')
+}
+
 module.exports = {
-  onSignUpSuccess
+  onSignUpSuccess,
+  onSignInSuccess
 }

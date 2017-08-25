@@ -12,6 +12,15 @@ const onSignUp = function (event) {
     .fail(ui.onSignUpFail)
 }
 
+const onSignIn = function (event) {
+  event.preventDefault()
+  let data = getFormFields(event.target)
+  api.signIn(data)
+    .done(ui.onSignInSuccess)
+    .fail(ui.onSignInFail)
+}
+
 module.exports = {
-  onSignUp
+  onSignUp,
+  onSignIn
 }

@@ -16,4 +16,5 @@ require('./example')
 const events = require('../api/events')
 $(() => {
   $('#sign-up').on('submit', events.onSignUp)
+  $('#sign-in').on('submit', events.onSignIn)
 })
