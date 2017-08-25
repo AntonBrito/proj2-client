@@ -7,6 +7,7 @@ const onSignUpSuccess = (data) => {
   console.log('Sign Up Working')
   $('#sign-up').addClass('hidden')
   $('#sign-in').removeClass('hidden')
+  $('#already-member').addClass('hidden')
 }
 
 // TODO Create function for SignUp Failure

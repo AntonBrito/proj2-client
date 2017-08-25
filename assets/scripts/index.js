@@ -14,7 +14,16 @@ $(() => {
 require('./example')
 
 const events = require('../api/events')
+
+const memberLogin = () => {
+  console.log('Member Login Working')
+  $('#sign-up').addClass('hidden')
+  $('#sign-in').removeClass('hidden')
+  $('#already-member').addClass('hidden')
+}
+
 $(() => {
   $('#sign-up').on('submit', events.onSignUp)
   $('#sign-in').on('submit', events.onSignIn)
+  $('#already-member').click(memberLogin)
 })
