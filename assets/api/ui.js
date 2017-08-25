@@ -17,6 +17,7 @@ const onSignInSuccess = (data) => {
   console.log('Sign in Working')
   $('#sign-in').addClass('hidden')
   $('#sign-out').removeClass('hidden')
+  $('#change-password').removeClass('hidden')
 }
 
 // TODO Create function for SignIn failure
