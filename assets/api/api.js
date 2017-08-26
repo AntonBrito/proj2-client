@@ -40,11 +40,10 @@ const signOut = function () {
   })
 }
 
-const index = function (data) {
+const index = function () {
   return $.ajax({
     url: app.host + '/games/' + app.user.id,
     method: 'GET',
-    data,
     headers: {
       Authorization: 'Token token=' + app.user.token
     }

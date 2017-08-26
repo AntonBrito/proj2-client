@@ -38,10 +38,16 @@ const signOutSuccess = () => {
   $('#already-member').removeClass('hidden')
 }
 
-const getSuccess = function () {
+const loopGames = function (data) {
+  for (let i = 0; i < data.games.length; i++) {
+    $('#gameStats').append('<p>' + data.games[i].game_name + ' ' + data.games[i].game_platform + ' ' + data.games[i].game_year + '</p>')
+  }
+}
+
+const getSuccess = function (data) {
   console.log('got here')
-  console.log('Log of User ID => ' + app.user)
-  console.log('Log of Users => ' + app.user.games)
+  console.log(data.games.length)
+  $('#gameStats').click(loopGames(data))
 
   // $('#gameStats').html('<div class="successMessage"> Gams Played:' + data.games.length + '</div>')
 }

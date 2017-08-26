@@ -39,7 +39,8 @@ const onSignOut = function (event) {
 
 const onGetGames = function (event) {
   event.preventDefault()
-  let data = app.user.games
+  let data = app.user.game
+  console.log(data)
   api.index(data)
     .then(ui.getSuccess)
     .catch(ui.fail)
