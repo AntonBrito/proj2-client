@@ -50,10 +50,32 @@ const index = function () {
   })
 }
 
+const createGame = function (nameText, platformText, genreText, yearText) {
+  return $.ajax({
+    url: app.host + '/games',
+    method: 'POST',
+    headers: {
+      Authorization: 'Token token=' + app.user.token
+    },
+    data: {
+      'game': {
+        'game_name': nameText,
+        'game_platform': platformText,
+        'game_genre': genreText,
+        'game_year': yearText,
+        'user_id': app.user.id,
+        'created_at': 'current_timestamp',
+        'updated_at': 'current_timestamp'
+      }
+    }
+  })
+}
+
 module.exports = {
   signUp,
   signIn,
   changePassword,
   signOut,
-  index
+  index,
+  createGame
 }

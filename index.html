@@ -81,11 +81,23 @@
           </fieldset>
         </form>
 <!-- END Sign Out ==================================================-->
+
+<!-- Start Get Games ==================================================-->
+
 <button id = 'get-games'>Get Games</button>
 <p id="gameStats">
       </p>
-
-
+<!-- End Get Games ==================================================-->
+<form id="add-game">
+      <fieldset>
+        <legend>Add Game</legend>
+        <input id='gName' type="text" name="credentials[game_name]" value="" placeholder="Game Name">
+        <input id='gPlatform' type="text" name="credentials[game_platform]" value="" placeholder="Game Platform">
+        <input id='gGenre' type="text" name="credentials[game_genre]" value="" placeholder="Game Genre">
+        <input id='gYear' type="text" name="credentials[game_year]" value="" placeholder="Release Year">
+        <input id="create-game" type="submit" name="submit" value="Add Game To Collection!">
+      </fieldset>
+    </form>
         </div>
       </main>
     </body>

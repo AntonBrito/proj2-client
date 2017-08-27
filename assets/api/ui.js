@@ -52,10 +52,16 @@ const getSuccess = function (data) {
   // $('#gameStats').html('<div class="successMessage"> Gams Played:' + data.games.length + '</div>')
 }
 
+const onCreateGameSuccess = (data) => {
+  app.game = data.game
+  app.game.id = data.game.id
+}
+
 module.exports = {
   onSignUpSuccess,
   onSignInSuccess,
   changePasswordSuccess,
   signOutSuccess,
-  getSuccess
+  getSuccess,
+  onCreateGameSuccess
 }

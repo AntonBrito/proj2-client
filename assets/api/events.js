@@ -47,10 +47,22 @@ const onGetGames = function (event) {
   console.log(api.index())
 }
 
+const onCreateGame = function (event) {
+  event.preventDefault()
+  const nameText = $('#gName').val()
+  const platformText = $('#gPlatform').val()
+  const genreText = $('#gGenre').val()
+  const yearText = $('#gYear').val()
+  api.createGame(nameText, platformText, genreText, yearText)
+    .then(ui.onCreateGameSuccess)
+    .catch(ui.fail)
+}
+
 module.exports = {
   onSignUp,
   onSignIn,
   onChangePassword,
   onSignOut,
-  onGetGames
+  onGetGames,
+  onCreateGame
 }
