@@ -65,7 +65,7 @@ const onEditGame = function (event) {
   const platformText = $('#egPlatform').val()
   const genreText = $('#egGenre').val()
   const yearText = $('#egYear').val()
-  api.editGame(nameText, platformText, genreText, yearText)
+  api.editGame(idText, nameText, platformText, genreText, yearText)
     .then(ui.onEditGameSuccess)
     .catch(ui.fail)
 }
