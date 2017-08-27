@@ -58,11 +58,24 @@ const onCreateGame = function (event) {
     .catch(ui.fail)
 }
 
+const onEditGame = function (event) {
+  event.preventDefault()
+  const idText = $('#gId').val()
+  const nameText = $('#gName').val()
+  const platformText = $('#gPlatform').val()
+  const genreText = $('#gGenre').val()
+  const yearText = $('#gYear').val()
+  api.editGame(nameText, platformText, genreText, yearText)
+    .then(ui.onEditGameSuccess)
+    .catch(ui.fail)
+}
+
 module.exports = {
   onSignUp,
   onSignIn,
   onChangePassword,
   onSignOut,
   onGetGames,
-  onCreateGame
+  onCreateGame,
+  onEditGame
 }

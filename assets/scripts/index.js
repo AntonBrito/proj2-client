@@ -30,4 +30,5 @@ $(() => {
   $('#sign-out').on('submit', events.onSignOut)
   $('#get-games').click(events.onGetGames)
   $('#create-game').click(events.onCreateGame)
+  $('#edit-game').click(events.onEditGame)
 })

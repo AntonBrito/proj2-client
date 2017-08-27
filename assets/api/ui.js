@@ -57,11 +57,17 @@ const onCreateGameSuccess = (data) => {
   app.game.id = data.game.id
 }
 
+const onEditGameSuccess = (data) => {
+  // app.game = data.game
+  // app.game.id = data.game.id
+}
+
 module.exports = {
   onSignUpSuccess,
   onSignInSuccess,
   changePasswordSuccess,
   signOutSuccess,
   getSuccess,
-  onCreateGameSuccess
+  onCreateGameSuccess,
+  onEditGameSuccess
 }
