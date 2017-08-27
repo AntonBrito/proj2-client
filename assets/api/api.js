@@ -71,7 +71,7 @@ const createGame = function (nameText, platformText, genreText, yearText) {
   })
 }
 
-const editGame = function (idText, nameText, platformText, genreText, yearText) {
+const editGame = function (nameText, platformText, genreText, yearText) {
   return $.ajax({
     url: app.host + '/games/' + app.user.id,
     method: 'PATCH',
@@ -80,7 +80,7 @@ const editGame = function (idText, nameText, platformText, genreText, yearText) 
     },
     data: {
       'game': {
-        'id': idText,
+        // 'id': idText,
         'game_name': nameText,
         'game_platform': platformText,
         'game_genre': genreText,

@@ -60,11 +60,11 @@ const onCreateGame = function (event) {
 
 const onEditGame = function (event) {
   event.preventDefault()
-  const idText = $('#gId').val()
-  const nameText = $('#gName').val()
-  const platformText = $('#gPlatform').val()
-  const genreText = $('#gGenre').val()
-  const yearText = $('#gYear').val()
+  const idText = $('#egId').val()
+  const nameText = $('#egName').val()
+  const platformText = $('#egPlatform').val()
+  const genreText = $('#egGenre').val()
+  const yearText = $('#egYear').val()
   api.editGame(nameText, platformText, genreText, yearText)
     .then(ui.onEditGameSuccess)
     .catch(ui.fail)

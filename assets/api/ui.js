@@ -40,7 +40,7 @@ const signOutSuccess = () => {
 
 const loopGames = function (data) {
   for (let i = 0; i < data.games.length; i++) {
-    $('#gameStats').append('<p>' + data.games[i].id + '    ' + data.games[i].game_name + '    ' + data.games[i].game_platform + '    ' + data.games[i].game_year + '</p>')
+    $('#gameStats').append('<p>' + data.games[i].id + '    ' + data.games[i].game_name + '    ' + data.games[i].game_platform + '    ' + data.games[i].game_genre + '    ' + data.games[i].game_year + '</p>')
   }
 }
 
