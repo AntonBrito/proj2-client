@@ -93,6 +93,21 @@ const editGame = function (idText, nameText, platformText, genreText, yearText) 
   })
 }
 
+const deleteGame = function (idText) {
+  return $.ajax({
+    url: app.host + '/games/' + app.user.id,
+    method: 'DELETE',
+    headers: {
+      Authorization: 'Token token=' + app.user.token
+    },
+    data: {
+      'game': {
+        'id': idText
+      }
+    }
+  })
+}
+
 module.exports = {
   signUp,
   signIn,
@@ -100,5 +115,6 @@ module.exports = {
   signOut,
   index,
   createGame,
-  editGame
+  editGame,
+  deleteGame
 }

@@ -31,4 +31,5 @@ $(() => {
   $('#get-games').click(events.onGetGames)
   $('#create-game').click(events.onCreateGame)
   $('#edit-game').click(events.onEditGame)
+  $('#delete-game').click(events.onDeleteGame)
 })

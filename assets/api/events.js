@@ -70,6 +70,14 @@ const onEditGame = function (event) {
     .catch(ui.fail)
 }
 
+const onDeleteGame = function (event) {
+  event.preventDefault()
+  const idText = $('#dgId').val()
+  api.deleteGame(idText)
+    .then(ui.onDeleteGameSuccess)
+    .catch(ui.fail)
+}
+
 module.exports = {
   onSignUp,
   onSignIn,
@@ -77,5 +85,6 @@ module.exports = {
   onSignOut,
   onGetGames,
   onCreateGame,
-  onEditGame
+  onEditGame,
+  onDeleteGame
 }

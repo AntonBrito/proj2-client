@@ -62,6 +62,11 @@ const onEditGameSuccess = (data) => {
   // app.game.id = data.game.id
 }
 
+const onDeleteGameSuccess = (data) => {
+  // app.game = data.game
+  // app.game.id = data.game.id
+}
+
 module.exports = {
   onSignUpSuccess,
   onSignInSuccess,
@@ -69,5 +74,6 @@ module.exports = {
   signOutSuccess,
   getSuccess,
   onCreateGameSuccess,
-  onEditGameSuccess
+  onEditGameSuccess,
+  onDeleteGameSuccess
 }
