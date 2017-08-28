@@ -34,15 +34,15 @@
           <form id="sign-up">
                 <fieldset>
                   <legend>Sign up!</legend>
-                  <input type="text" name="credentials[email]" value="" placeholder="email">
-                  <input type="password" name="credentials[password]" value="" placeholder="password">
-                  <input type="password" name="credentials[password_confirmation]" value="" placeholder="password confirmation">
+                  <input type="text" name="credentials[email]" value="" placeholder="Email">
+                  <input type="password" name="credentials[password]" value="" placeholder="Password">
+                  <input type="password" name="credentials[password_confirmation]" value="" placeholder="Confirm Password">
                   <p id = "sign-up-success" class = "successMessage hidden">Sign Up Successfull!</p>
                   <p id = "sign-up-error" class = "errorMessage hidden">Sorry! Username Taken or Passwords Do Not Match</p>
-                  <input type="submit" name="submit" value="Sign up!!">
+                  <input class="sub-button" type="submit" name="submit" value="Sign up!!">
                 </fieldset>
               </form>
-              <button id='already-member' class="btn btn-primary">Already a Member?<br>Click here to login</button>
+              <button id='already-member' class="btn btn-primary sub-button">Already a Member?<br>Click here to login</button>
 
 <!-- End Sign Up FORM ==================================================-->
 
@@ -55,36 +55,24 @@
                 <input type="password" name="credentials[password]" value="" placeholder="password">
                 <p id = "sign-in-success" class = "successMessage hidden">Sign In Successfull!</p>
                 <p id = "sign-in-error" class = "errorMessage hidden">Unsuccessfull, Username or Password Incorrect</p>
-                <input type="submit" name="submit" value="Sign in!">
+                <input class="sub-button" type="submit" name="submit" value="Sign in!">
               </fieldset>
             </form>
 <!-- END Sign In FORM ==================================================-->
 
-<!-- Start ChangePW ==================================================-->
-<form id="change-password" class="hidden">
-                <fieldset>
-                  <legend>Change Password</legend>
-                  <input type="password" name="passwords[old]" value="" placeholder="Old Password">
-                  <input type="password" name="passwords[new]" value="" placeholder="New Password">
-                  <p id = "change-pass-sucess" class = "successMessage hidden">Password Successfully Changed!</p>
-                  <p id = "change-pass-fail" class = "errorMessage hidden">Original Password Incorrect!</p>
-                  <input type="submit" name="submit" value="Change Password">
-                </fieldset>
-              </form>
-<!-- END ChangePW ==================================================-->
 
 <!-- Start Sign Out  ==================================================-->
         <form id="sign-out" class="hidden">
           <fieldset>
-            <input type="submit" name="submit" value="Sign out!">
-            <p id = "sign-out-success" class = "successMessage hidden">Signed Out!</p>
+            <input class="sub-button" type="submit" name="submit" value="Sign out!">
+            <p id="sign-out-success" class = "hidden">Signed Out!</p>
           </fieldset>
         </form>
 <!-- END Sign Out ==================================================-->
 
 <!-- Start Get Games ==================================================-->
 
-<button id='get-games' class='hidden'>Get Games</button>
+<button id='get-games' class='hidden btn sub-button'>Get Games</button>
 <!-- <p id="gameStats">
       </p> -->
 <table id='gameStats' class='hidden'>
@@ -106,7 +94,7 @@
         <input id='gPlatform' type="text" name="credentials[game_platform]" value="" placeholder="Game Platform">
         <input id='gGenre' type="text" name="credentials[game_genre]" value="" placeholder="Game Genre">
         <input id='gYear' type="text" name="credentials[game_year]" value="" placeholder="Release Year">
-        <input id="create-game" type="submit" name="submit" value="Add Game To Collection!">
+        <input id="create-game" class="sub-button" type="submit" name="submit" value="Add Game">
       </fieldset>
     </form>
 <!-- End Add Game ==================================================-->
@@ -120,7 +108,7 @@
         <input id='egPlatform' type="text" name="credentials[game_platform]" value="" placeholder="Game Platform">
         <input id='egGenre' type="text" name="credentials[game_genre]" value="" placeholder="Game Genre">
         <input id='egYear' type="text" name="credentials[game_year]" value="" placeholder="Release Year">
-        <input id="edit-game" type="submit" name="submit" value="Edit Game">
+        <input id="edit-game" class="sub-button" type="submit" name="submit" value="Edit Game">
       </fieldset>
     </form>
 <!-- End Add Game ==================================================-->
@@ -130,10 +118,22 @@
       <fieldset>
         <legend>Delete Game</legend>
         <input id='dgId' type="text" name="credentials[id]" value="" placeholder="Required: ID of Game to Delete">
-        <input id="delete-game" type="submit" name="submit" value="Edit Game">
+        <input id="delete-game" class="sub-button" type="submit" name="submit" value="Delete Game">
       </fieldset>
     </form>
 <!-- End Delete Game ==================================================-->
+<!-- Start ChangePW ==================================================-->
+<form id="change-password" class="hidden">
+                <fieldset>
+                  <legend>Change Password</legend>
+                  <input type="password" name="passwords[old]" value="" placeholder="Old Password">
+                  <input type="password" name="passwords[new]" value="" placeholder="New Password">
+                  <p id = "change-pass-sucess" class = "successMessage hidden">Password Successfully Changed!</p>
+                  <p id = "change-pass-fail" class = "errorMessage hidden">Original Password Incorrect!</p>
+                  <input class="sub-button" type="submit" name="submit" value="Change Password">
+                </fieldset>
+              </form>
+<!-- END ChangePW ==================================================-->
 
         </div>
       </main>

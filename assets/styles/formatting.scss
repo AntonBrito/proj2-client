@@ -1,3 +1,6 @@
+@import './colors';
+@import './text';
+
 .hidden {
   display: none;
 }
@@ -10,6 +13,16 @@
 input {
   display: block;
   margin: 5px auto;
+  width: 25%;
+}
+
+.sub-button {
+  background-color: $black;
+  border: 3px solid $game-green;
+  color: $game-green;
+  font-family: $button-text;
+  font-size: 1.5em;
+  margin: 10px auto;
 }
 
 .btn {
