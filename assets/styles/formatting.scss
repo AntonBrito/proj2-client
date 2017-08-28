@@ -33,3 +33,13 @@ input {
 #gameStats {
   width: 100%;
 }
+
+.success-message {
+  color: $success;
+  font-size: 1.5em;
+}
+
+.error-message {
+  color: $error;
+  text-align: center;
+}

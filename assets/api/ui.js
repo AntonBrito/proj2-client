@@ -10,7 +10,9 @@ const onSignUpSuccess = (data) => {
   $('#already-member').addClass('hidden')
 }
 
-// TODO Create function for SignUp Failure
+const onSignUpFailure = () => {
+  $('#suError').removeClass('hidden')
+}
 
 const onSignInSuccess = (data) => {
   app.user = data.user
@@ -89,5 +91,6 @@ module.exports = {
   getSuccess,
   onCreateGameSuccess,
   onEditGameSuccess,
-  onDeleteGameSuccess
+  onDeleteGameSuccess,
+  onSignUpFailure
 }
