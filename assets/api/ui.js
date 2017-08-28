@@ -19,6 +19,8 @@ const onSignInSuccess = (data) => {
   $('#sign-in').addClass('hidden')
   $('#sign-out').removeClass('hidden')
   $('#change-password').removeClass('hidden')
+  $('#gameStats').removeClass('hidden')
+  $('#get-games').removeClass('hidden')
 }
 
 // TODO Create function for SignIn failure
@@ -36,12 +38,15 @@ const signOutSuccess = () => {
   $('#sign-out').addClass('hidden')
   $('#sign-up').removeClass('hidden')
   $('#already-member').removeClass('hidden')
+  $('#gameStats').addClass('hidden')
+  $('#get-games').addClass('hidden')
+  $('.gameRow').remove()
 }
 
 const loopGames = function (data) {
   for (let i = 0; i < data.games.length; i++) {
     $('#gameStats').append(
-      '<tr>' +
+      '<tr class="gameRow">' +
         '<td>' + data.games[i].id + '</td>' +
         '<td>' + data.games[i].game_name + '</td>' +
         '<td>' + data.games[i].game_platform + '</td>' +
@@ -55,6 +60,7 @@ const loopGames = function (data) {
 const getSuccess = function (data) {
   console.log('got here')
   console.log(data.games.length)
+  $('.gameRow').remove()
   $('#gameStats').click(loopGames(data))
 
   // $('#gameStats').html('<div class="successMessage"> Gams Played:' + data.games.length + '</div>')
