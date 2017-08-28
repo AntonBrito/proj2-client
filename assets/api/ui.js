@@ -23,15 +23,22 @@ const onSignInSuccess = (data) => {
   $('#change-password').removeClass('hidden')
   $('#gameStats').removeClass('hidden')
   $('#get-games').removeClass('hidden')
+  $('#siError').addClass('hidden')
 }
 
-// TODO Create function for SignIn failure
+const onSignInFail = () => {
+  $('#siError').removeClass('hidden')
+}
 
 const changePasswordSuccess = () => {
-  console.log('Password Change Successful')
+  $('#cpwSuccess').removeClass('hidden')
+  $('#cpwError').addClass('hidden')
 }
 
-// TODO Create function for Change Password Failure
+const onChangePasswordFail = () => {
+  $('#cpwError').removeClass('hidden')
+  $('#cpwSuccess').addClass('hidden')
+}
 
 const signOutSuccess = () => {
   app.user = null
@@ -92,5 +99,7 @@ module.exports = {
   onCreateGameSuccess,
   onEditGameSuccess,
   onDeleteGameSuccess,
-  onSignUpFailure
+  onSignUpFailure,
+  onSignInFail,
+  onChangePasswordFail
 }

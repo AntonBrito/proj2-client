@@ -52,8 +52,7 @@
                 <legend>Sign in!</legend>
                 <input type="text" name="credentials[email]" value="" placeholder="email">
                 <input type="password" name="credentials[password]" value="" placeholder="password">
-                <p id = "sign-in-success" class = "successMessage hidden">Sign In Successfull!</p>
-                <p id = "sign-in-error" class = "errorMessage hidden">Unsuccessfull, Username or Password Incorrect</p>
+                <p id='siError' class='error-message hidden'>Invalid Username or Password</p>
                 <input class="sub-button" type="submit" name="submit" value="Sign in!">
               </fieldset>
             </form>
@@ -125,10 +124,10 @@
 <form id="change-password" class="hidden">
                 <fieldset>
                   <legend>Change Password</legend>
-                  <input type="password" name="passwords[old]" value="" placeholder="Old Password">
+                  <input type="password" name="passwords[old]" value="" placeholder="Original Password">
                   <input type="password" name="passwords[new]" value="" placeholder="New Password">
-                  <p id = "change-pass-sucess" class = "successMessage hidden">Password Successfully Changed!</p>
-                  <p id = "change-pass-fail" class = "errorMessage hidden">Original Password Incorrect!</p>
+                  <p id='cpwError' class='error-message hidden'>Invalid: Original Password Incorrect</p>
+                  <p id='cpwSuccess' class='success-message hidden'>Password Successfully Changed</p>
                   <input class="sub-button" type="submit" name="submit" value="Change Password">
                 </fieldset>
               </form>
