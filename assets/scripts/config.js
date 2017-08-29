@@ -2,7 +2,7 @@
 
 const config = {
   apiOrigins: {
-    production: 'http://localhost:4741/'
+    production: 'https://pure-beach-11955.herokuapp.com/'
   }
 }
 
