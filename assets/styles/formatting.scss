@@ -44,3 +44,24 @@ input {
   color: $error;
   text-align: center;
 }
+
+// Landing Auth Container
+.landing-auth-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.modal {
+  top: 30%;
+}
+
+// Introduction
+.introduction {
+  margin: 0 auto;
+  text-align: center;
+
+  > h2 {
+    font-family: 'Berkshire Swash', cursive;
+  }
+}
