@@ -27,8 +27,9 @@
           <h2>Welcome!</h2>
           <p>Are you a collector?  Do you find yourself making purchases based on crossing something off a list?<br> Then you are among friends!  Migz Collectibles is your one stop shop for tracking your video game collection online!</p>
         </div>
+
         <div class="landing-auth-container">
-          <button type="button" class="sub-button" data-toggle="modal" data-target=".sign-up-modal">Sign Up</button>
+          <button id="su-modal" type="button" class="sub-button" data-toggle="modal" data-target=".sign-up-modal">Sign Up</button>
           <div class="modal fade sign-up-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg">
               <div class="modal-content">
@@ -47,14 +48,14 @@
           </div>
 
           <button type="button" class="sub-button" data-toggle="modal" data-target=".sign-in-modal">Sign In</button>
-          <div class="modal fade sign-in-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+          <div id="si-modal" class="modal fade sign-in-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg">
               <div class="modal-content">
                 <form id="sign-in">
                   <fieldset>
                     <legend>Sign in!</legend>
-                    <input type="text" name="credentials[email]" value="" placeholder="email">
-                    <input type="password" name="credentials[password]" value="" placeholder="password">
+                    <input type="text" name="credentials[email]" value="" placeholder="Email">
+                    <input type="password" name="credentials[password]" value="" placeholder="Password">
                     <p id='siError' class='error-message hidden'>Invalid Username or Password</p>
                     <input class="sub-button" type="submit" name="submit" value="Sign in!">
                   </fieldset>
@@ -62,6 +63,9 @@
               </div>
             </div>
           </div>
+        </div>
+        <div class="error-handling">
+
         </div>
 
 

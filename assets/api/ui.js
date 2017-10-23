@@ -5,25 +5,39 @@ const app = require('../scripts/app.js')
 const onSignUpSuccess = (data) => {
   app.user = data.user
   console.log('Sign Up Working')
-  $('#sign-up').addClass('hidden')
-  $('#sign-in').removeClass('hidden')
-  $('#already-member').addClass('hidden')
+  // $('#sign-up').addClass('hidden')
+  // $('#sign-in').removeClass('hidden')
+  // $('#already-member').addClass('hidden')
+  $('#suError').addClass('hidden')
+  $('.error-handling').children().remove()
+  $('.error-handling').append('<p class="success-message">Sign Up Successfull')
+  $('#su-modal').click()
+  $('input:not([type="submit"]), textarea').val('')
 }
 
 const onSignUpFailure = () => {
   $('#suError').removeClass('hidden')
+  $('input:not([type="submit"]), textarea').val('')
 }
 
 const onSignInSuccess = (data) => {
   app.user = data.user
   console.log('Sign in Working')
   // console.log('Log of data.game => ' + data.user)
-  $('#sign-in').addClass('hidden')
+  // $('#sign-in').addClass('hidden')
   $('#sign-out').removeClass('hidden')
   $('#change-password').removeClass('hidden')
   $('#gameStats').removeClass('hidden')
   $('#get-games').removeClass('hidden')
   $('#siError').addClass('hidden')
+
+  $('#si-modal').click()
+  $('.introduction').hide()
+  $('.landing-auth-container').hide()
+  $('.error-handling').children().remove()
+  $('.error-handling').append('<p class="success-message">Signed In!').delay(3000).fadeOut()
+  $('input:not([type="submit"]), textarea').val('')
+
 }
 
 const onSignInFail = () => {
@@ -50,6 +64,10 @@ const signOutSuccess = () => {
   $('#gameStats').addClass('hidden')
   $('#get-games').addClass('hidden')
   $('.gameRow').remove()
+
+  $('.introduction').show()
+$('.landing-auth-container').show()
+$('.error-handling').children().remove()
 }
 
 const loopGames = function (data) {
