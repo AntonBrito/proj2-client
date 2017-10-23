@@ -25,8 +25,8 @@ const onSignInSuccess = (data) => {
   console.log('Sign in Working')
   // console.log('Log of data.game => ' + data.user)
   // $('#sign-in').addClass('hidden')
-  $('#sign-out').removeClass('hidden')
-  $('#change-password').removeClass('hidden')
+  // $('#sign-out').removeClass('hidden')
+  // $('#change-password').removeClass('hidden')
   $('#gameStats').removeClass('hidden')
   $('#get-games').removeClass('hidden')
   $('#siError').addClass('hidden')
@@ -37,6 +37,7 @@ const onSignInSuccess = (data) => {
   $('.error-handling').children().remove()
   $('.error-handling').append('<p class="success-message">Signed In!').delay(3000).fadeOut()
   $('input:not([type="submit"]), textarea').val('')
+  $('footer').removeClass('hidden')
 
 }
 
@@ -66,8 +67,9 @@ const signOutSuccess = () => {
   $('.gameRow').remove()
 
   $('.introduction').show()
-$('.landing-auth-container').show()
-$('.error-handling').children().remove()
+  $('.landing-auth-container').show()
+  $('.error-handling').children().remove()
+  $('footer').addClass('hidden')
 }
 
 const loopGames = function (data) {

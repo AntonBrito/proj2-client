@@ -106,12 +106,12 @@
 
 
 <!-- Start Sign Out  ==================================================-->
-        <form id="sign-out" class="hidden">
+        <!-- <form id="sign-out" class="hidden">
           <fieldset>
             <input class="sub-button" type="submit" name="submit" value="Sign out!">
             <p id="sign-out-success" class = "hidden">Signed Out!</p>
           </fieldset>
-        </form>
+        </form> -->
 <!-- END Sign Out ==================================================-->
 
 <!-- Start Get Games ==================================================-->
@@ -167,7 +167,25 @@
     </form>
 <!-- End Delete Game ==================================================-->
 <!-- Start ChangePW ==================================================-->
-<form id="change-password" class="hidden">
+<!-- <form id="change-password" class="hidden">
+                <fieldset>
+                  <legend>Change Password</legend>
+                  <input type="password" name="passwords[old]" value="" placeholder="Original Password">
+                  <input type="password" name="passwords[new]" value="" placeholder="New Password">
+                  <p id='cpwError' class='error-message hidden'>Invalid: Original Password Incorrect</p>
+                  <p id='cpwSuccess' class='success-message hidden'>Password Successfully Changed</p>
+                  <input class="sub-button" type="submit" name="submit" value="Change Password">
+                </fieldset>
+              </form> -->
+<!-- END ChangePW ==================================================-->
+
+      </main>
+      <footer class="hidden">
+        <div class="dropup">
+          <button class="sub-button dropdown-toggle" type="button" data-toggle="dropdown">Change Password
+            <span class="caret"></span></button>
+            <ul class="dropdown-menu">
+              <form id="change-password">
                 <fieldset>
                   <legend>Change Password</legend>
                   <input type="password" name="passwords[old]" value="" placeholder="Original Password">
@@ -177,8 +195,14 @@
                   <input class="sub-button" type="submit" name="submit" value="Change Password">
                 </fieldset>
               </form>
-<!-- END ChangePW ==================================================-->
-
-      </main>
+            </ul>
+          </div>
+        <form id="sign-out">
+          <fieldset>
+            <input class="sub-button" type="submit" name="submit" value="Sign out!">
+            <p id="sign-out-success" class = "hidden">Signed Out!</p>
+          </fieldset>
+        </form>
+      </footer>
     </body>
 </html>
