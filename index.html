@@ -1,84 +1,38 @@
 <!DOCTYPE html>
 <html>
-    <head>
-      <title>Example</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <title>Example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `link` tags-->
-      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <!-- Do not add `link` tags-->
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 
-      <!-- Do not add `script` tags-->
-      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
-      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    <!-- Do not add `script` tags-->
+    <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+    <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
 
-      <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash" rel="stylesheet">
 
-    </head>
-    <body>
-      <header>
-        <h1 class="header-text-1">Migz Collectibles</h1>
-        <h2 class="tag-line">Helping You Track Your Game Collection</h2>
-      </header>
-      <main>
-        <div class="jumbotron">
-          <img class="jumbo-img" src="http://i.imgur.com/ZWOsGar.png">
-        </div>
-        <div class="introduction">
-          <h2>Welcome!</h2>
-          <p>Are you a collector?  Do you find yourself making purchases based on crossing something off a list?<br> Then you are among friends!  Migz Collectibles is your one stop shop for tracking your video game collection online!</p>
-        </div>
-
-        <div class="landing-auth-container">
-          <button id="su-modal" type="button" class="sub-button" data-toggle="modal" data-target=".sign-up-modal">Sign Up</button>
-          <div class="modal fade sign-up-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg">
-              <div class="modal-content">
-                <form id="sign-up">
-                  <fieldset>
-                    <legend>Sign up!</legend>
-                    <input type="text" name="credentials[email]" value="" placeholder="Email">
-                    <input type="password" name="credentials[password]" value="" placeholder="Password">
-                    <input type="password" name="credentials[password_confirmation]" value="" placeholder="Confirm Password">
-                    <p id='suError' class='error-message hidden'>Sorry! Username Taken or Passwords Don't Match</p>
-                    <input class="sub-button" type="submit" name="submit" value="Sign up!!">
-                  </fieldset>
-                </form>
-              </div>
-            </div>
-          </div>
-
-          <button type="button" class="sub-button" data-toggle="modal" data-target=".sign-in-modal">Sign In</button>
-          <div id="si-modal" class="modal fade sign-in-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg">
-              <div class="modal-content">
-                <form id="sign-in">
-                  <fieldset>
-                    <legend>Sign in!</legend>
-                    <input type="text" name="credentials[email]" value="" placeholder="Email">
-                    <input type="password" name="credentials[password]" value="" placeholder="Password">
-                    <p id='siError' class='error-message hidden'>Invalid Username or Password</p>
-                    <input class="sub-button" type="submit" name="submit" value="Sign in!">
-                  </fieldset>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="error-handling">
-
-        </div>
-
-
-          <!-- <form class="sign-up" action="index.html" method="post">
-            <input type="text" placeholder="Email">
-            <input type="text" placeholder="Password">
-            <input type="text" placeholder="Confirm Password">
-            <button class ="btn btn-primary" type="button" name="button">Sign Up</button>
-            <br>
-            <button class="btn btn-primary">Already a Member?<br>Click here to login</button>
-          </form> -->
-<!-- START Sign Up FORM ==================================================-->
-          <!-- <form id="sign-up">
+  </head>
+  <body>
+    <header>
+      <h1 class="header-text-1">Migz Collectibles</h1>
+      <h2 class="tag-line">Helping You Track Your Game Collection</h2>
+    </header>
+    <main>
+      <div class="jumbotron">
+        <img class="jumbo-img" src="http://i.imgur.com/ZWOsGar.png">
+      </div>
+      <div class="introduction">
+        <h2>Welcome!</h2>
+        <p>Are you a collector?  Do you find yourself making purchases based on crossing something off a list?<br> Then you are among friends!  Migz Collectibles is your one stop shop for tracking your video game collection online!</p>
+      </div>
+      <div class="landing-auth-container">
+        <button id="su-modal" type="button" class="sub-button" data-toggle="modal" data-target=".sign-up-modal">Sign Up</button>
+        <div class="modal fade sign-up-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <form id="sign-up">
                 <fieldset>
                   <legend>Sign up!</legend>
                   <input type="text" name="credentials[email]" value="" placeholder="Email">
@@ -87,182 +41,111 @@
                   <p id='suError' class='error-message hidden'>Sorry! Username Taken or Passwords Don't Match</p>
                   <input class="sub-button" type="submit" name="submit" value="Sign up!!">
                 </fieldset>
-              </form> -->
-
-<!-- End Sign Up FORM ==================================================-->
-
-<!-- START Sign In FORM ==================================================-->
-
-          <!-- <form id="sign-in" class="hidden">
+              </form>
+            </div>
+          </div>
+        </div>
+        <button type="button" class="sub-button" data-toggle="modal" data-target=".sign-in-modal">Sign In</button>
+        <div id="si-modal" class="modal fade sign-in-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <form id="sign-in">
+                <fieldset>
+                  <legend>Sign in!</legend>
+                  <input type="text" name="credentials[email]" value="" placeholder="Email">
+                  <input type="password" name="credentials[password]" value="" placeholder="Password">
+                  <p id='siError' class='error-message hidden'>Invalid Username or Password</p>
+                  <input class="sub-button" type="submit" name="submit" value="Sign in!">
+                </fieldset>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="error-handling"></div>
+      <div class="game-actions hidden">
+        <!-- Add Game -->
+        <div class="dropup">
+          <button class="sub-button dropdown-toggle" type="button" data-toggle="dropdown">Add Game<span class="caret"></span></button>
+          <ul class="dropdown-menu">
+            <form id="add-game">
               <fieldset>
-                <legend>Sign in!</legend>
-                <input type="text" name="credentials[email]" value="" placeholder="email">
-                <input type="password" name="credentials[password]" value="" placeholder="password">
-                <p id='siError' class='error-message hidden'>Invalid Username or Password</p>
-                <input class="sub-button" type="submit" name="submit" value="Sign in!">
+                <legend>Add Game</legend>
+                <input id='gName' type="text" name="credentials[game_name]" value="" placeholder="Game Name">
+                <input id='gPlatform' type="text" name="credentials[game_platform]" value="" placeholder="Game Platform">
+                <input id='gGenre' type="text" name="credentials[game_genre]" value="" placeholder="Game Genre">
+                <input id='gYear' type="text" name="credentials[game_year]" value="" placeholder="Release Year">
+                <input id="create-game" class="sub-button" type="submit" name="submit" value="Add Game">
               </fieldset>
-            </form> -->
-<!-- END Sign In FORM ==================================================-->
-
-
-<!-- Start Sign Out  ==================================================-->
-        <!-- <form id="sign-out" class="hidden">
-          <fieldset>
-            <input class="sub-button" type="submit" name="submit" value="Sign out!">
-            <p id="sign-out-success" class = "hidden">Signed Out!</p>
-          </fieldset>
-        </form> -->
-<!-- END Sign Out ==================================================-->
-
-<!-- Start Get Games ==================================================-->
-<div class="game-actions hidden">
-
-  <!-- Add Game -->
-  <div class="dropup">
-    <button class="sub-button dropdown-toggle" type="button" data-toggle="dropdown">Add Game
-      <span class="caret"></span></button>
-      <ul class="dropdown-menu">
-        <form id="add-game">
-          <fieldset>
-            <legend>Add Game</legend>
-            <input id='gName' type="text" name="credentials[game_name]" value="" placeholder="Game Name">
-            <input id='gPlatform' type="text" name="credentials[game_platform]" value="" placeholder="Game Platform">
-            <input id='gGenre' type="text" name="credentials[game_genre]" value="" placeholder="Game Genre">
-            <input id='gYear' type="text" name="credentials[game_year]" value="" placeholder="Release Year">
-            <input id="create-game" class="sub-button" type="submit" name="submit" value="Add Game">
-          </fieldset>
-        </form>
-      </ul>
-    </div>
-
-    <!-- Edit Game -->
-    <div class="dropup">
-      <button class="sub-button dropdown-toggle" type="button" data-toggle="dropdown">Edit Game
-        <span class="caret"></span></button>
+            </form>
+          </ul>
+        </div>
+        <!-- Edit Game -->
+        <div class="dropup">
+          <button class="sub-button dropdown-toggle" type="button" data-toggle="dropdown">Edit Game<span class="caret"></span></button>
+          <ul class="dropdown-menu">
+            <form>
+              <fieldset>
+                <legend>Edit Game</legend>
+                <input id='egId' type="text" name="credentials[id]" value="" placeholder="Required: ID of Game to Edit">
+                <input id='egName' type="text" name="credentials[game_name]" value="" placeholder="Game Name">
+                <input id='egPlatform' type="text" name="credentials[game_platform]" value="" placeholder="Game Platform">
+                <input id='egGenre' type="text" name="credentials[game_genre]" value="" placeholder="Game Genre">
+                <input id='egYear' type="text" name="credentials[game_year]" value="" placeholder="Release Year">
+                <input id="edit-game" class="sub-button" type="submit" name="submit" value="Edit Game">
+              </fieldset>
+            </form>
+          </ul>
+        </div>
+        <!-- Delete Game -->
+        <div class="dropup">
+          <button class="sub-button dropdown-toggle" type="button" data-toggle="dropdown">Delete Game<span class="caret"></span></button>
+          <ul class="dropdown-menu">
+            <form>
+              <fieldset>
+                <legend>Delete Game</legend>
+                <input id='dgId' type="text" name="credentials[id]" value="" placeholder="Required: ID of Game to Delete">
+                <input id="delete-game" class="sub-button" type="submit" name="submit" value="Delete Game">
+              </fieldset>
+            </form>
+          </ul>
+        </div>
+      </div>
+      <h2 class="collection-header hidden">Collection</h2>
+      <div class="collection">
+        <table id='gameStats' class='hidden'>
+          <tr>
+            <th>Game ID</th>
+            <th>Game Name</th>
+            <th>Platform</th>
+            <th>Genre</th>
+            <th>Release Year</th>
+          </tr>
+        </table>
+      </div>
+    </main>
+    <footer class="hidden">
+      <div class="dropup">
+        <button class="sub-button dropdown-toggle" type="button" data-toggle="dropdown">Change Password<span class="caret"></span></button>
         <ul class="dropdown-menu">
-          <form>
+          <form id="change-password">
             <fieldset>
-              <legend>Edit Game</legend>
-              <input id='egId' type="text" name="credentials[id]" value="" placeholder="Required: ID of Game to Edit">
-              <input id='egName' type="text" name="credentials[game_name]" value="" placeholder="Game Name">
-              <input id='egPlatform' type="text" name="credentials[game_platform]" value="" placeholder="Game Platform">
-              <input id='egGenre' type="text" name="credentials[game_genre]" value="" placeholder="Game Genre">
-              <input id='egYear' type="text" name="credentials[game_year]" value="" placeholder="Release Year">
-              <input id="edit-game" class="sub-button" type="submit" name="submit" value="Edit Game">
+              <legend>Change Password</legend>
+              <input type="password" name="passwords[old]" value="" placeholder="Original Password">
+              <input type="password" name="passwords[new]" value="" placeholder="New Password">
+              <p id='cpwError' class='error-message hidden'>Invalid: Original Password Incorrect</p>
+              <p id='cpwSuccess' class='success-message hidden'>Password Successfully Changed</p>
+              <input class="sub-button" type="submit" name="submit" value="Change Password">
             </fieldset>
           </form>
         </ul>
       </div>
-
-      <!-- Delete Game -->
-      <div class="dropup">
-        <button class="sub-button dropdown-toggle" type="button" data-toggle="dropdown">Delete Game
-          <span class="caret"></span></button>
-          <ul class="dropdown-menu">
-            <form>
-                  <fieldset>
-                    <legend>Delete Game</legend>
-                    <input id='dgId' type="text" name="credentials[id]" value="" placeholder="Required: ID of Game to Delete">
-                    <input id="delete-game" class="sub-button" type="submit" name="submit" value="Delete Game">
-                  </fieldset>
-                </form>
-          </ul>
-        </div>
-
-</div>
-
-<!-- <button id='get-games' class='hidden btn sub-button'>Get Games</button> -->
-
-<!-- <p id="gameStats">
-      </p> -->
-<!-- <button id='get-games' class='hidden btn sub-button'>Get Games</button> -->
-<div class="collection">
-  <table id='gameStats' class='hidden'>
-  <tr>
-    <th>Game ID</th>
-    <th>Game Name</th>
-    <th>Platform</th>
-    <th>Genre</th>
-    <th>Release Year</th>
-  </tr>
- </table>
-</div>
-
-<!-- End Get Games ==================================================-->
-
-<!-- Start Add Game ==================================================-->
-<!-- <form id="add-game">
-      <fieldset>
-        <legend>Add Game</legend>
-        <input id='gName' type="text" name="credentials[game_name]" value="" placeholder="Game Name">
-        <input id='gPlatform' type="text" name="credentials[game_platform]" value="" placeholder="Game Platform">
-        <input id='gGenre' type="text" name="credentials[game_genre]" value="" placeholder="Game Genre">
-        <input id='gYear' type="text" name="credentials[game_year]" value="" placeholder="Release Year">
-        <input id="create-game" class="sub-button" type="submit" name="submit" value="Add Game">
-      </fieldset>
-    </form> -->
-<!-- End Add Game ==================================================-->
-
-<!-- Start Edit Game ==================================================-->
-<!-- <form>
-      <fieldset>
-        <legend>Edit Game</legend>
-        <input id='egId' type="text" name="credentials[id]" value="" placeholder="Required: ID of Game to Edit">
-        <input id='egName' type="text" name="credentials[game_name]" value="" placeholder="Game Name">
-        <input id='egPlatform' type="text" name="credentials[game_platform]" value="" placeholder="Game Platform">
-        <input id='egGenre' type="text" name="credentials[game_genre]" value="" placeholder="Game Genre">
-        <input id='egYear' type="text" name="credentials[game_year]" value="" placeholder="Release Year">
-        <input id="edit-game" class="sub-button" type="submit" name="submit" value="Edit Game">
-      </fieldset>
-    </form> -->
-<!-- End Add Game ==================================================-->
-
-<!-- Start Delete Game ==================================================-->
-<!-- <form>
-      <fieldset>
-        <legend>Delete Game</legend>
-        <input id='dgId' type="text" name="credentials[id]" value="" placeholder="Required: ID of Game to Delete">
-        <input id="delete-game" class="sub-button" type="submit" name="submit" value="Delete Game">
-      </fieldset>
-    </form> -->
-<!-- End Delete Game ==================================================-->
-<!-- Start ChangePW ==================================================-->
-<!-- <form id="change-password" class="hidden">
-                <fieldset>
-                  <legend>Change Password</legend>
-                  <input type="password" name="passwords[old]" value="" placeholder="Original Password">
-                  <input type="password" name="passwords[new]" value="" placeholder="New Password">
-                  <p id='cpwError' class='error-message hidden'>Invalid: Original Password Incorrect</p>
-                  <p id='cpwSuccess' class='success-message hidden'>Password Successfully Changed</p>
-                  <input class="sub-button" type="submit" name="submit" value="Change Password">
-                </fieldset>
-              </form> -->
-<!-- END ChangePW ==================================================-->
-
-      </main>
-      <footer class="hidden">
-        <div class="dropup">
-          <button class="sub-button dropdown-toggle" type="button" data-toggle="dropdown">Change Password
-            <span class="caret"></span></button>
-            <ul class="dropdown-menu">
-              <form id="change-password">
-                <fieldset>
-                  <legend>Change Password</legend>
-                  <input type="password" name="passwords[old]" value="" placeholder="Original Password">
-                  <input type="password" name="passwords[new]" value="" placeholder="New Password">
-                  <p id='cpwError' class='error-message hidden'>Invalid: Original Password Incorrect</p>
-                  <p id='cpwSuccess' class='success-message hidden'>Password Successfully Changed</p>
-                  <input class="sub-button" type="submit" name="submit" value="Change Password">
-                </fieldset>
-              </form>
-            </ul>
-          </div>
-        <form id="sign-out">
-          <fieldset>
-            <input class="sub-button" type="submit" name="submit" value="Sign out!">
-            <p id="sign-out-success" class = "hidden">Signed Out!</p>
-          </fieldset>
-        </form>
-      </footer>
-    </body>
+      <form id="sign-out">
+        <fieldset>
+          <input class="sub-button" type="submit" name="submit" value="Sign out!">
+          <p id="sign-out-success" class = "hidden">Signed Out!</p>
+        </fieldset>
+      </form>
+    </footer>
+  </body>
 </html>

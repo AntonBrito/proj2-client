@@ -39,6 +39,7 @@ const onSignInSuccess = (data) => {
   $('input:not([type="submit"]), textarea').val('')
   $('footer').removeClass('hidden')
   $('.game-actions').removeClass('hidden')
+  $('.collection-header').removeClass('hidden')
 
 }
 
@@ -72,7 +73,7 @@ const signOutSuccess = () => {
   $('.error-handling').children().remove()
   $('footer').addClass('hidden')
   $('.game-actions').addClass('hidden')
-
+  $('.collection-header').addClass('hidden')
 }
 
 const loopGames = function (data) {
