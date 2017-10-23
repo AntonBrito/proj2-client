@@ -38,6 +38,7 @@ const onSignInSuccess = (data) => {
   $('.error-handling').append('<p class="success-message">Signed In!').delay(3000).fadeOut()
   $('input:not([type="submit"]), textarea').val('')
   $('footer').removeClass('hidden')
+  $('.game-actions').removeClass('hidden')
 
 }
 
@@ -58,8 +59,8 @@ const onChangePasswordFail = () => {
 const signOutSuccess = () => {
   app.user = null
   console.log('Sign Out Successful')
-  $('#change-password').addClass('hidden')
-  $('#sign-out').addClass('hidden')
+  // $('#change-password').addClass('hidden')
+  // $('#sign-out').addClass('hidden')
   $('#sign-up').removeClass('hidden')
   $('#already-member').removeClass('hidden')
   $('#gameStats').addClass('hidden')
@@ -70,6 +71,8 @@ const signOutSuccess = () => {
   $('.landing-auth-container').show()
   $('.error-handling').children().remove()
   $('footer').addClass('hidden')
+  $('.game-actions').addClass('hidden')
+
 }
 
 const loopGames = function (data) {

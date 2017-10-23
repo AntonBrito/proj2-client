@@ -13,13 +13,7 @@ const onSignUp = function (event) {
     .fail(ui.onSignUpFailure)
 }
 
-const onSignIn = function (event) {
-  event.preventDefault()
-  let data = getFormFields(event.target)
-  api.signIn(data)
-    .done(ui.onSignInSuccess)
-    .fail(ui.onSignInFail)
-}
+
 
 const onChangePassword = function (event) {
   event.preventDefault()
@@ -47,6 +41,15 @@ const onGetGames = function (event) {
   console.log(api.index())
 }
 
+const onSignIn = function (event) {
+  event.preventDefault()
+  let data = getFormFields(event.target)
+  api.signIn(data)
+    .then(ui.onSignInSuccess)
+    .then(() => onGetGames(event))
+    .fail(ui.onSignInFail)
+}
+
 const onCreateGame = function (event) {
   event.preventDefault()
   const nameText = $('#gName').val()
@@ -55,6 +58,7 @@ const onCreateGame = function (event) {
   const yearText = $('#gYear').val()
   api.createGame(nameText, platformText, genreText, yearText)
     .then(ui.onCreateGameSuccess)
+    .then(() => onGetGames(event))
     .catch(ui.fail)
 }
 
@@ -67,6 +71,7 @@ const onEditGame = function (event) {
   const yearText = $('#egYear').val()
   api.editGame(idText, nameText, platformText, genreText, yearText)
     .then(ui.onEditGameSuccess)
+    .then(() => onGetGames(event))
     .catch(ui.fail)
 }
 
@@ -75,6 +80,7 @@ const onDeleteGame = function (event) {
   const idText = $('#dgId').val()
   api.deleteGame(idText)
     .then(ui.onDeleteGameSuccess)
+    .then(() => onGetGames(event))
     .catch(ui.fail)
 }
 

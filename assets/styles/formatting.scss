@@ -36,10 +36,6 @@ form {
   margin: 0 auto;
 }
 
-#gameStats {
-  width: 100%;
-}
-
 .success-message {
   color: $success;
   font-size: 1.5em;
@@ -89,5 +85,26 @@ footer {
 
   > div {
     padding-right: 10px;
+  }
+}
+
+.game-actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
+.collection {
+  display: flex;
+  justify-content: center;
+}
+
+#gameStats {
+  margin: 10px auto 100px;
+  width: 90%;
+
+  > tr > td {
+    text-align: center;
   }
 }

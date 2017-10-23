@@ -115,11 +115,69 @@
 <!-- END Sign Out ==================================================-->
 
 <!-- Start Get Games ==================================================-->
+<div class="game-actions hidden">
 
-<button id='get-games' class='hidden btn sub-button'>Get Games</button>
+  <!-- Add Game -->
+  <div class="dropup">
+    <button class="sub-button dropdown-toggle" type="button" data-toggle="dropdown">Add Game
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        <form id="add-game">
+          <fieldset>
+            <legend>Add Game</legend>
+            <input id='gName' type="text" name="credentials[game_name]" value="" placeholder="Game Name">
+            <input id='gPlatform' type="text" name="credentials[game_platform]" value="" placeholder="Game Platform">
+            <input id='gGenre' type="text" name="credentials[game_genre]" value="" placeholder="Game Genre">
+            <input id='gYear' type="text" name="credentials[game_year]" value="" placeholder="Release Year">
+            <input id="create-game" class="sub-button" type="submit" name="submit" value="Add Game">
+          </fieldset>
+        </form>
+      </ul>
+    </div>
+
+    <!-- Edit Game -->
+    <div class="dropup">
+      <button class="sub-button dropdown-toggle" type="button" data-toggle="dropdown">Edit Game
+        <span class="caret"></span></button>
+        <ul class="dropdown-menu">
+          <form>
+            <fieldset>
+              <legend>Edit Game</legend>
+              <input id='egId' type="text" name="credentials[id]" value="" placeholder="Required: ID of Game to Edit">
+              <input id='egName' type="text" name="credentials[game_name]" value="" placeholder="Game Name">
+              <input id='egPlatform' type="text" name="credentials[game_platform]" value="" placeholder="Game Platform">
+              <input id='egGenre' type="text" name="credentials[game_genre]" value="" placeholder="Game Genre">
+              <input id='egYear' type="text" name="credentials[game_year]" value="" placeholder="Release Year">
+              <input id="edit-game" class="sub-button" type="submit" name="submit" value="Edit Game">
+            </fieldset>
+          </form>
+        </ul>
+      </div>
+
+      <!-- Delete Game -->
+      <div class="dropup">
+        <button class="sub-button dropdown-toggle" type="button" data-toggle="dropdown">Delete Game
+          <span class="caret"></span></button>
+          <ul class="dropdown-menu">
+            <form>
+                  <fieldset>
+                    <legend>Delete Game</legend>
+                    <input id='dgId' type="text" name="credentials[id]" value="" placeholder="Required: ID of Game to Delete">
+                    <input id="delete-game" class="sub-button" type="submit" name="submit" value="Delete Game">
+                  </fieldset>
+                </form>
+          </ul>
+        </div>
+
+</div>
+
+<!-- <button id='get-games' class='hidden btn sub-button'>Get Games</button> -->
+
 <!-- <p id="gameStats">
       </p> -->
-<table id='gameStats' class='hidden'>
+<!-- <button id='get-games' class='hidden btn sub-button'>Get Games</button> -->
+<div class="collection">
+  <table id='gameStats' class='hidden'>
   <tr>
     <th>Game ID</th>
     <th>Game Name</th>
@@ -127,11 +185,13 @@
     <th>Genre</th>
     <th>Release Year</th>
   </tr>
-</table>
+ </table>
+</div>
+
 <!-- End Get Games ==================================================-->
 
 <!-- Start Add Game ==================================================-->
-<form id="add-game">
+<!-- <form id="add-game">
       <fieldset>
         <legend>Add Game</legend>
         <input id='gName' type="text" name="credentials[game_name]" value="" placeholder="Game Name">
@@ -140,11 +200,11 @@
         <input id='gYear' type="text" name="credentials[game_year]" value="" placeholder="Release Year">
         <input id="create-game" class="sub-button" type="submit" name="submit" value="Add Game">
       </fieldset>
-    </form>
+    </form> -->
 <!-- End Add Game ==================================================-->
 
 <!-- Start Edit Game ==================================================-->
-<form>
+<!-- <form>
       <fieldset>
         <legend>Edit Game</legend>
         <input id='egId' type="text" name="credentials[id]" value="" placeholder="Required: ID of Game to Edit">
@@ -154,17 +214,17 @@
         <input id='egYear' type="text" name="credentials[game_year]" value="" placeholder="Release Year">
         <input id="edit-game" class="sub-button" type="submit" name="submit" value="Edit Game">
       </fieldset>
-    </form>
+    </form> -->
 <!-- End Add Game ==================================================-->
 
 <!-- Start Delete Game ==================================================-->
-<form>
+<!-- <form>
       <fieldset>
         <legend>Delete Game</legend>
         <input id='dgId' type="text" name="credentials[id]" value="" placeholder="Required: ID of Game to Delete">
         <input id="delete-game" class="sub-button" type="submit" name="submit" value="Delete Game">
       </fieldset>
-    </form>
+    </form> -->
 <!-- End Delete Game ==================================================-->
 <!-- Start ChangePW ==================================================-->
 <!-- <form id="change-password" class="hidden">
